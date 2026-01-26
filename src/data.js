@@ -106,3 +106,18 @@ export const education = [
         year: "2009"
     }
 ];
+
+export const recommendations = [
+    {
+        id: 1,
+        name: "Divaahar Muthuswamy",
+        role: "Techno Functional Leader | Data Architect",
+        text: "I've had the opportunity to work with Aruna, and she is an exceptional professional with deep expertise in retail, logistics, SAP, and data... Her ability to simplify complex processes and provide clear, actionable solutions sets her apart. Aruna consistently brings strong analytical thinking... reliable, collaborative, and a go-to resource for critical system and process insights."
+    },
+    {
+        id: 2,
+        name: "Carol Goldberg",
+        role: "DB2 DBA",
+        text: "Aruna was very easy to collaborate and work with. Work was always planned out and followed up on. I would be excited to work with her anytime."
+    }
+];

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, FileText, ExternalLink, ChevronDown, Code, Database, BarChart } from 'lucide-react';
-import { personalInfo, skills, projects, experience, education } from './data';
+import { personalInfo, skills, projects, experience, education, recommendations } from './data';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -146,6 +146,24 @@ function App() {
                 <h3>{edu.degree}</h3>
                 <p className="company">{edu.school}</p>
                 <p className="period">{edu.year}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="recommendations" className="section bg-dim">
+        <div className="container">
+          <h2 className="section-title">Recommendations</h2>
+          <div className="grid-cols-2">
+            {recommendations.map((rec) => (
+              <div key={rec.id} className="glass-panel testimonial-card">
+                <p className="testimonial-text">"{rec.text}"</p>
+                <div className="testimonial-author">
+                  <h4 className="author-name">{rec.name}</h4>
+                  <span className="author-role">{rec.role}</span>
+                </div>
               </div>
             ))}
           </div>
