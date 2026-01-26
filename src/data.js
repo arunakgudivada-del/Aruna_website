@@ -7,7 +7,7 @@ export const personalInfo = {
     email: "arunak.gudivada@gmail.com",
     phone: "980-422-5926",
     location: "Austin, TX",
-    linkedin: "https://www.linkedin.com/in/aruna-gudivada", // Inferred from resume
+    linkedin: "https://www.linkedin.com/in/aruna-gudivada/",
     github: "https://github.com/arunagudivada", // Placeholder, keep if unknown
     summary: "Results-driven Senior Data Scientist with 10+ years of experience delivering high-impact analytics in complex, global environments, including 4+ years supporting Apple Inc.'s supply chain and manufacturing operations. Expert in advanced SQL, Python-based analysis, statistical modeling, and measuring the causal impact of process/policy changes on key metrics. Proven track record building scalable data pipelines, real-time dashboards and cross-functional insights that drive multi-million-dollar decisions."
 };

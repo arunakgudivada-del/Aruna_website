@@ -25,6 +25,9 @@ function App() {
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="icon-link">
+              <Linkedin size={20} />
+            </a>
             <a href="#contact" className="btn btn-primary btn-sm">Contact Me</a>
           </div>
         </div>
