@@ -1,14 +1,14 @@
 :root {
-  --bg-dark: #f8fafc;
-  --bg-darker: #f1f5f9;
+  --bg-dark: #0f172a;
+  --bg-darker: #020617;
   --primary: #8b5cf6;
   --secondary: #ec4899;
   --accent: #06b6d4;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.8);
-  --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -53,7 +53,7 @@ h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.1;
-  color: var(--text-main);
+  color: #fff;
   margin-bottom: 1rem;
 }
 
@@ -127,13 +127,13 @@ ul {
 }
 
 .btn-outline {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--glass-border);
   color: var(--text-main);
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
   border-color: var(--text-main);
 }
 
@@ -150,7 +150,7 @@ ul {
 }
 
 .glass-panel:hover {
-  border-color: var(--primary);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Navigation */
@@ -165,7 +165,7 @@ ul {
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(10px);
   padding: 1rem 0;
   border-bottom: 1px solid var(--glass-border);
@@ -253,7 +253,6 @@ ul {
   transform: translateX(-50%);
   opacity: 0.7;
   animation: bounce 2s infinite;
-  color: var(--text-muted);
 }
 
 /* Skills */
@@ -269,18 +268,17 @@ ul {
 }
 
 .skill-tag {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   font-size: 0.9rem;
-  border: 1px solid var(--primary);
-  color: var(--text-main);
+  border: 1px solid var(--glass-border);
   transition: all 0.3s ease;
 }
 
 .skill-tag:hover {
   background: rgba(139, 92, 246, 0.2);
-  border-color: var(--secondary);
+  border-color: var(--primary);
 }
 
 /* Projects */
@@ -303,7 +301,6 @@ ul {
 .tech-badge {
   font-size: 0.8rem;
   color: var(--accent);
-  font-weight: 600;
 }
 
 .project-links {
@@ -317,7 +314,7 @@ ul {
 }
 
 .icon-link:hover {
-  color: var(--primary);
+  color: #fff;
 }
 
 /* Experience */
@@ -369,15 +366,13 @@ ul {
 .social-links a {
   padding: 1rem;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--glass-border);
-  color: var(--text-main);
 }
 
 .social-links a:hover {
   background: var(--primary);
   border-color: var(--primary);
-  color: white;
 }
 
 /* Media Queries */
@@ -431,7 +426,7 @@ ul {
 }
 
 .education-card .company {
-  color: var(--text-main);
+  color: #fff;
   margin-bottom: 0.25rem;
 }
 
