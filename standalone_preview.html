@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aruna Gudivada | Portfolio Preview</title>
+    <!-- Lucide Icons (script for CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-darker: #020617;
+            --primary: #8b5cf6;
+            --secondary: #ec4899;
+            --accent: #06b6d4;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .background-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.1), transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.1), transparent 40%);
+            pointer-events: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.1;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            font-size: 1rem;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--glass-border);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--text-main);
+        }
+
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 1.5rem 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-top: 5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .subtitle {
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .title {
+            font-size: 4.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            font-size: 2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .description {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* Grid */
+        .grid-cols-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Skills */
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            border: 1px solid var(--glass-border);
+            display: inline-block;
+            margin: 0.25rem;
+        }
+
+        /* Updates for education */
+        .education-card h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .education-card .company {
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .education-card .period {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 0;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            padding: 1rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">AG.</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="btn btn-primary btn-sm">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero section">
+        <div class="container hero-content">
+            <span class="subtitle text-gradient">Hello, I'm</span>
+            <h1 class="title">Aruna Gudivada</h1>
+            <h2 class="role">Senior Data Scientist</h2>
+            <p class="description">Results-driven Data Scientist specializing in Supply Chain Analytics, ML, and Causal
+                Inference</p>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#" class="btn btn-outline">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="glass-panel">
+                <p>Results-driven Senior Data Scientist with 10+ years of experience delivering high-impact analytics in
+                    complex, global environments, including 4+ years supporting Apple Inc.'s supply chain and
+                    manufacturing operations. Expert in advanced SQL, Python-based analysis, statistical modeling, and
+                    measuring the causal impact of process/policy changes on key metrics. Proven track record building
+                    scalable data pipelines, real-time dashboards and cross-functional insights that drive
+                    multi-million-dollar decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="grid-cols-2">
+                <div class="glass-panel">
+                    <h3>Languages & Frameworks</h3>
+                    <div><span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span
+                            class="skill-tag">R</span><span class="skill-tag">Bash</span><span
+                            class="skill-tag">PySpark</span><span class="skill-tag">Pandas</span></div>
+                </div>
+                <div class="glass-panel">
+                    <h3>Machine Learning</h3>
+                    <div><span class="skill-tag">Regression</span><span class="skill-tag">Random Forest</span><span
+                            class="skill-tag">Clustering</span><span class="skill-tag">A/B Testing</span><span
+                            class="skill-tag">Causal Inference</span></div>
+                </div>
+                <div class="glass-panel">
+                    <h3>Big Data & Cloud</h3>
+                    <div><span class="skill-tag">Snowflake</span><span class="skill-tag">Databricks</span><span
+                            class="skill-tag">Apache Spark</span><span class="skill-tag">AWS</span><span
+                            class="skill-tag">Azure ML</span><span class="skill-tag">Apache Airflow</span></div>
+                </div>
+                <div class="glass-panel">
+                    <h3>Visualization & BI</h3>
+                    <div><span class="skill-tag">Tableau</span><span class="skill-tag">Matplotlib</span><span
+                            class="skill-tag">Seaborn</span><span class="skill-tag">ggplot2</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="grid-cols-2">
+                <div class="glass-panel">
+                    <h3>Supply Chain Optimization (Apple Inc.)</h3>
+                    <p>Designed and productionized supply chain data models enabling real-time visibility. Re-engineered
+                        critical data pipelines reducing runtime by 78% (9 hours to < 2 hours) and improving reporting
+                            accuracy from <10% to 98%.</p>
+                            <div style="margin-top: 1rem;"><span class="skill-tag">Snowflake</span><span
+                                    class="skill-tag">PySpark</span><span class="skill-tag">Airflow</span></div>
+                </div>
+                <div class="glass-panel">
+                    <h3>Global Inventory & Forecasting ML</h3>
+                    <p>Developed ML models for predictive demand forecasting and inventory optimization. Deployed a
+                        time-series forecasting model improving global refurbishment decisions accuracy by 25%.</p>
+                    <div style="margin-top: 1rem;"><span class="skill-tag">Machine Learning</span><span
+                            class="skill-tag">Time-Series</span><span class="skill-tag">Python</span></div>
+                </div>
+                <div class="glass-panel">
+                    <h3>Tax Revenue Dashboards</h3>
+                    <p>Engineered advanced Tableau dashboards for Sales, Franchise, and Property Tax divisions at Texas
+                        Comptroller. Enabled drill-down capabilities and trend analysis for senior leadership.</p>
+                    <div style="margin-top: 1rem;"><span class="skill-tag">Tableau</span><span
+                            class="skill-tag">SQL</span></div>
+                </div>
+                <div class="glass-panel">
+                    <h3>Digital Transformation (ICICI Bank)</h3>
+                    <p>Drove migration strategy moving 42% of corporate trade clients to online portals. Built SQL-based
+                        operational dashboards and conducted customer segmentation analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="glass-panel" style="margin-bottom: 2rem;">
+                <h3>Senior Data Scientist</h3>
+                <p class="text-gradient">Tata Consultancy Services (Client: Apple Inc.)</p>
+                <p class="role">Nov 2021 - Present</p>
+                <p>Leading data initiatives for Apple's supply chain. Designed real-time visibility models, built
+                    scalable SAP integrations reducing discrepancies by 98%, and developed ML frameworks for unit
+                    replacement matching.</p>
+            </div>
+            <div class="glass-panel" style="margin-bottom: 2rem;">
+                <h3>BI Developer / Systems Analyst IV</h3>
+                <p class="text-gradient">Texas Comptroller of Public Accounts</p>
+                <p class="role">Jun 2018 - Oct 2020</p>
+                <p>Developed interactive Tableau dashboards for key tax divisions. Performance-tuned intricate SQL
+                    procedures and performed in-depth ad-hoc analysis on large-scale tax datasets.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="grid-cols-2">
+                <div class="glass-panel education-card">
+                    <h3>Master of Science in Analytics</h3>
+                    <p class="company">Georgia Institute of Technology, Atlanta, GA</p>
+                    <p class="period">2024</p>
+                </div>
+                <div class="glass-panel education-card">
+                    <h3>Bachelor of Engineering</h3>
+                    <p class="company">Gayatri Vidya Parishad College of Engineering, India</p>
+                    <p class="period">2009</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i data-lucide="github"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+                <a href="#"><i data-lucide="mail"></i></a>
+            </div>
+            <p>© 2026 Aruna Gudivada. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
