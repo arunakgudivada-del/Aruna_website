@@ -148,7 +148,7 @@ function App() {
                     <img
                       src={`${import.meta.env.BASE_URL}${edu.logo}`.replace('//', '/')}
                       alt={`${edu.school} logo`}
-                      style={{ width: '60px', height: '60px', borderRadius: '8px', objectFit: 'cover' }}
+                      style={{ width: '80px', height: '80px', borderRadius: '8px', objectFit: 'contain', backgroundColor: 'white', padding: '4px' }}
                     />
                   )}
                   <div>
