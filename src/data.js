@@ -101,7 +101,7 @@ export const education = [
         school: "Georgia Institute of Technology",
         location: "Atlanta, GA",
         year: "Dec 2024",
-        logo: "/gatech.svg",
+        logo: "/gatech.jpg",
         description: "Specialized in Machine Learning, Big Data Analytics, and Computational Data Analytics. Coursework included Data Visualization, Cloud Computing & ML.",
         coursework: ["Machine Learning", "Big Data Analytics for Business", "Computational Data Analytics", "Data Visualization", "Cloud Computing & ML"]
     },
@@ -111,7 +111,7 @@ export const education = [
         school: "Gayatri Vidya Parishad College of Engineering",
         location: "India",
         year: "May 2009",
-        logo: "/manipal.svg",
+        logo: "/gayatri.jpg",
         description: "Foundation in engineering principles and analytical problem solving."
     }
 ];
