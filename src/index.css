@@ -227,9 +227,9 @@ ul {
 
 .role {
   font-size: 2rem;
-  color: var(--text-muted);
+  color: var(--accent);
   margin-bottom: 2rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .description {
@@ -434,6 +434,7 @@ ul {
   color: var(--text-muted);
   font-size: 0.9rem;
 }
+
 /* Testimonials */
 .testimonial-card {
   display: flex;
