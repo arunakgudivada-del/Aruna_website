@@ -9,7 +9,7 @@ export const personalInfo = {
     location: "Austin, TX",
     linkedin: "https://www.linkedin.com/in/aruna-gudivada/",
     github: "https://github.com/arunagudivada", // Placeholder, keep if unknown
-    summary: "Results-driven Senior Data Scientist with 10+ years of experience delivering high-impact analytics in complex, global environments, including 4+ years supporting Apple Inc.'s supply chain and manufacturing operations. Expert in advanced SQL, Python-based analysis, statistical modeling, and measuring the causal impact of process/policy changes on key metrics. Proven track record building scalable data pipelines, real-time dashboards and cross-functional insights that drive multi-million-dollar decisions."
+    summary: "Senior Data Scientist with over 10 years of experience designing and delivering scalable, high-impact data solutions, specializing in supply chain visibility, forecasting, anomaly detection, and operational experimentation that drive multi-million-dollar efficiency gains. Proven expertise in architecting end-to-end pipelines using Apache Airflow, PySpark, and Snowflake (driving 35% cost reduction). Hands-on leader in big data migrations and statistical modeling (regression, clustering, causal inference) to enable real-time operational decision-making."
 };
 
 export const skills = [
