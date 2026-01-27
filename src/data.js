@@ -96,14 +96,23 @@ export const experience = [
 
 export const education = [
     {
+        id: 1,
         degree: "Master of Science in Analytics",
-        school: "Georgia Institute of Technology, Atlanta, GA",
-        year: "2024"
+        school: "Georgia Institute of Technology",
+        location: "Atlanta, GA",
+        year: "Dec 2024",
+        logo: "/gatech.svg",
+        description: "Specialized in Machine Learning, Big Data Analytics, and Computational Data Analytics. Coursework included Data Visualization, Cloud Computing & ML.",
+        coursework: ["Machine Learning", "Big Data Analytics for Business", "Computational Data Analytics", "Data Visualization", "Cloud Computing & ML"]
     },
     {
+        id: 2,
         degree: "Bachelor of Engineering (Electronics & Communication)",
-        school: "Gayatri Vidya Parishad College of Engineering, India",
-        year: "2009"
+        school: "Gayatri Vidya Parishad College of Engineering",
+        location: "India",
+        year: "May 2009",
+        logo: "/manipal.svg",
+        description: "Foundation in engineering principles and analytical problem solving."
     }
 ];
 

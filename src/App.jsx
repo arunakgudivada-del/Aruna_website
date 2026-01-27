@@ -140,12 +140,31 @@ function App() {
       <section id="education" className="section">
         <div className="container">
           <h2 className="section-title">Education</h2>
-          <div className="grid-cols-2">
+          <div className="timeline">
             {education.map((edu, index) => (
               <div key={index} className="glass-panel education-card">
-                <h3>{edu.degree}</h3>
-                <p className="company">{edu.school}</p>
-                <p className="period">{edu.year}</p>
+                <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
+                  {edu.logo && (
+                    <img
+                      src={`${import.meta.env.BASE_URL}${edu.logo}`.replace('//', '/')}
+                      alt={`${edu.school} logo`}
+                      style={{ width: '60px', height: '60px', borderRadius: '8px', objectFit: 'cover' }}
+                    />
+                  )}
+                  <div>
+                    <h3>{edu.degree}</h3>
+                    <p className="company">{edu.school}</p>
+                    <p className="period">{edu.location} | {edu.year}</p>
+                    {edu.description && <p style={{ marginTop: '0.5rem', fontSize: '0.95rem' }}>{edu.description}</p>}
+                    {edu.coursework && (
+                      <div className="tech-stack" style={{ marginTop: '0.75rem' }}>
+                        {edu.coursework.map((course, i) => (
+                          <span key={i} className="skill-tag" style={{ fontSize: '0.8rem', padding: '0.25rem 0.75rem' }}>{course}</span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
