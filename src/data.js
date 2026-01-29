@@ -8,7 +8,8 @@ export const personalInfo = {
     phone: "980-422-5926",
     location: "Austin, TX",
     linkedin: "https://www.linkedin.com/in/aruna-gudivada/",
-    github: "https://github.com/arunagudivada", // Placeholder, keep if unknown
+    github: "https://github.com/arunagudivada",
+    profileImage: "/profile.jpg",
     summary: "Senior Data Scientist with over 10 years of experience designing and delivering scalable, high-impact data solutions, specializing in supply chain visibility, forecasting, anomaly detection, and operational experimentation that drive multi-million-dollar efficiency gains. Proven expertise in architecting end-to-end pipelines using Apache Airflow, PySpark, and Snowflake (driving 35% cost reduction). Hands-on leader in big data migrations and statistical modeling (regression, clustering, causal inference) to enable real-time operational decision-making."
 };
 
@@ -76,21 +77,33 @@ export const experience = [
         role: "Senior Data Scientist",
         company: "Tata Consultancy Services (Client: Apple Inc.)",
         period: "Nov 2021 - Present",
-        description: "Leading data initiatives for Apple's supply chain. Designed real-time visibility models, built scalable SAP integrations reducing discrepancies by 98%, and developed ML frameworks for unit replacement matching."
+        points: [
+            "Leading data initiatives for Apple's supply chain, designing real-time visibility models that drive strategic decisions.",
+            "Built scalable SAP integrations that reduced data discrepancies by 98%, ensuring high-fidelity reporting.",
+            "Developed Machine Learning frameworks for unit replacement matching, significantly improving inventory efficiency."
+        ]
     },
     {
         id: 2,
         role: "BI Developer / Systems Analyst IV",
         company: "Texas Comptroller of Public Accounts",
         period: "Jun 2018 - Oct 2020",
-        description: "Developed interactive Tableau dashboards for key tax divisions. Performance-tuned intricate SQL procedures and performed in-depth ad-hoc analysis on large-scale tax datasets."
+        points: [
+            "Developed interactive Tableau dashboards for key tax divisions (Sales, Franchise, Property Tax), facilitating data-driven policy making.",
+            "Performance-tuned intricate SQL procedures, optimizing query execution times for large-scale tax datasets.",
+            "Performed in-depth ad-hoc analysis to support senior leadership with actionable insights."
+        ]
     },
     {
         id: 3,
         role: "Data Analyst – Assistant Manager (IT)",
         company: "ICICI Bank",
         period: "May 2011 - Dec 2014",
-        description: "Led digital transformation strategies for trade finance. Conducted customer segmentation using statistical techniques and resolved critical data quality issues."
+        points: [
+            "Led digital transformation strategies for trade finance, successfully moving 42% of corporate clients to online portals.",
+            "Conducted customer segmentation using statistical techniques (K-means, clustering) to target high-value clients.",
+            "Resolved critical data quality issues acting as a liaison between business units and IT teams."
+        ]
     }
 ];
 
@@ -128,5 +141,20 @@ export const recommendations = [
         name: "Carol Goldberg",
         role: "DB2 DBA",
         text: "Aruna was very easy to collaborate and work with. Work was always planned out and followed up on. I would be excited to work with her anytime."
+    }
+];
+
+export const certifications = [
+    {
+        id: 1,
+        name: "SnowPro Core Certification",
+        issuer: "Snowflake",
+        date: "2024"
+    },
+    {
+        id: 2,
+        name: "AWS Certified Solutions Architect",
+        issuer: "Amazon Web Services",
+        date: "2023"
     }
 ];

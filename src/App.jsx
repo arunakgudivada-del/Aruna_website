@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, FileText, ExternalLink, ChevronDown, Code, Database, BarChart } from 'lucide-react';
-import { personalInfo, skills, projects, experience, education, recommendations } from './data';
+import { personalInfo, skills, projects, experience, education, recommendations, certifications } from './data';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,6 +25,8 @@ function App() {
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
             <a href={`mailto:${personalInfo.email}`} className="icon-link" title="Email Me">
               <Mail size={20} />
             </a>
@@ -39,6 +41,15 @@ function App() {
       {/* Hero Section */}
       <section className="hero section">
         <div className="container hero-content animate-fade-in">
+          {personalInfo.profileImage && (
+            <div className="profile-img-container">
+              <img
+                src={personalInfo.profileImage}
+                alt={`${personalInfo.name} Profile`}
+                className="profile-img"
+              />
+            </div>
+          )}
           <span className="subtitle text-gradient">Hello, I'm</span>
           <h1 className="title">{personalInfo.name}</h1>
           <h2 className="role">{personalInfo.role}</h2>
@@ -129,7 +140,27 @@ function App() {
                   <span className="company text-gradient">{exp.company}</span>
                   <span className="period">{exp.period}</span>
                 </div>
-                <p>{exp.description}</p>
+                <ul className="experience-points">
+                  {exp.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="section bg-dim">
+        <div className="container">
+          <h2 className="section-title">Certifications</h2>
+          <div className="grid-cols-2">
+            {certifications.map((cert, index) => (
+              <div key={index} className="glass-panel cert-card">
+                <h3>{cert.name}</h3>
+                <p className="cert-issuer">{cert.issuer}</p>
+                <p className="cert-date">{cert.date}</p>
               </div>
             ))}
           </div>
